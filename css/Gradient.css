@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  background: #cad2c5;
+}
+
+.table {
+  background: #efefef;
+  position: relative;
+  margin: auto;
+  overflow: scroll;
+  width: 80vw;
+  border-radius: 0.25em;
+  padding: 1vw 2vw;
+}
+
+@color-from: #99ff99;
+@color-to: #99e6ff;
+
+.tr {
+  display: flex;
+  min-width: 60em;
+  background: linear-gradient(217deg, rgba(237,237,233,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(237,237,233,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(237,237,233,.8), rgba(0,0,255,0) 70.71%);
+  background-size: 100% 1000%;
+  border-radius: 0.25em;
+  margin: 0.5em 0;
+  
+  &:nth-child(1) {
+    background-position: 0 0;
+  }
+  
+  &:nth-child(2) {
+    background-position: 0 -100%;
+  }
+  
+  &:nth-child(3) {
+    background-position: 0 -200%;
+  }
+  
+  &:nth-child(4) {
+    background-position: 0 -300%;
+  }
+  
+  &:nth-child(5) {
+    background-position: 0 -400%;
+  }
+  
+  &:nth-child(6) {
+    background-position: 0 -500%;
+  }
+  
+  &:nth-child(7) {
+    background-position: 0 -600%;
+  }
+  
+  &:nth-child(8) {
+    background-position: 0 -700%;
+  }
+  
+  &:nth-child(9) {
+    background-position: 0 -800%;
+  }
+  
+  &:nth-child(10) {
+    background-position: 0 -900%;
+  }
+  
+  .striped &:nth-child(2n),
+  &.title {
+    background: #fff;
+  }
+}
+
+.title {
+  margin-top: 0;
+  padding: 2vw 0;
+  font-weight: bold;
+  position: sticky;
+  border-radius: 0;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.25);
+}
+
+.tr:last-child {
+  border-bottom: none;
+  width: 100%;
+}
+
+.td {
+  width: calc(100%/8);
+  box-sizing: border-box;
+  float: left;
+  min-width: 7.5em;
+}
+
+.td:last-child {
+  border-right: none;
+}
+
+.cell {
+  position: relative;
+  font-size: 1.25em;
+  font-family: sans-serif;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: left;
+  display: block;
+}
+
+.cell:first-child {
+  padding-left: none;
+}
+
+.cell:last-child {
+  padding-right: none;
+}

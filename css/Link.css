@@ -1,0 +1,80 @@
+div.d {
+  text-align: justify;
+} 
+
+a.one:link {color:#ff0000;}
+a.one:visited {color:#0000ff;}
+a.one:hover {color:#ffcd01;}
+
+
+a.five:link {color:#023e8a;text-decoration:none; font-family:Khmer OS Siemreap; font-size:0.9em;}
+a.five:visited {color:#023e8a;text-decoration:none;  font-family:Khmer OS Siemreap; font-size:0.9em; }
+a.five:hover {color:#00b4d8; text-decoration:none;  font-family:Khmer OS Siemreap; font-size:0.9em; }
+
+
+
+a.Content:link {color:#e26d5c;text-decoration:none;​ text-align:justify; font-family:Khmer OS Muol Light; font-size:0.9em;}
+a.Content:visited {color:#e26d5c;text-decoration:none;  font-family:Khmer OS Muol Light; font-size:0.9em; }
+a.Content:hover {color:#e63946; text-decoration:none;  font-family:Khmer OS Muol Light; font-size:0.9em; }
+
+
+	p {
+		text-align: justify;
+	}
+
+
+
+a.KhMuol {
+  font-family: Khmer OS Muol Light;
+  font-size:1.1em;
+  font-weight: lighter;
+  color: #03045E;
+ 
+}
+
+a.KhTitle {
+  font-family: Khmer OS Muol Light;
+  font-size:1.9em;
+  font-weight: lighter;
+  color: #03045E;
+ 
+}
+
+
+a.English {
+  font-family: Cambria;
+  font-size:1.3em;
+  font-weight: lighter;
+  color: #03045E;
+ 
+}
+
+ a.KhSiemreap {
+  font-family: Khmer OS Siemreap;
+  font-size:0.9em;
+  font-weight: bold;
+  color: #1d3557 ;
+  font-kerning: auto;
+}
+
+
+a.KhMuolcont {
+  font-family: Khmer OS Muol Light;
+  font-size:1.5em;
+  font-weight: lighter;
+  color: #588d78;
+ 
+}
+
+
+div.gradient {
+    height: auto;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
+}
+
+a.koulen-regular {
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

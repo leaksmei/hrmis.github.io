@@ -1,0 +1,53 @@
+/*BULLET*/
+
+body {font-size: 100%;} /* purely for cosmetic reasons */
+
+
+
+
+
+/*TREE*/
+
+
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0px;
+  padding: 5px;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  color:#4c3a5a;
+
+}
+
+.caret::before {
+  content: "\25B7";
+
+  color: #3d008d;
+  display: inline-block;
+  margin-right: 10px;	
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(190deg);
+
+
+}
+.nested {
+  display: none;
+
+}
+
+.active {
+  display: block;
+}

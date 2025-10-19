@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <body bgcolor="#DDF6D2">
+
+  <link rel="stylesheet" href="../css/bullet.css">
+  <link rel="stylesheet" href="../css/Link.css">
+  <link rel="stylesheet" href="../css/beforebullet.css">
+
+<meta charset="UTF-8" />
+<title>Content</title>
+<style>
+  body {
+    font-family: Khmer OS Siemreap, sans-serif;
+    padding: 10px;
+  }
+  ul, #tree {
+    list-style-type: none;
+    padding-left: 1em;
+  }
+
+  .caret {
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+  }
+
+  .caret::before {
+    content: "\25B7";
+    display: inline-block;
+    margin-right: 6px;
+    transition: transform 0.3s;
+  }
+
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+
+  .nested {
+    display: none;
+    margin-left: 1em;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+</style>
+
+
+
+
+</head>
+<body>
+
+<input type="text" id="searchBox" placeholder="ស្វែងរកព័ត៌មាន" onkeyup="searchTree()" style="width: 200px; height: 30px;">
+
+
+
+<ul id="tree">
+  <span class="caret"><a class="KhSiemreap">ព្រះរាជក្រម</a></span>
+    <ul class="nested">
+		    <li><a class="five" href="../hls/contentview/ព្រះរាជក្រម០០៩.html" target="main">
+          ព្រះរាជក្រមលេខ នស/រកម/០៦១៨/០១២ ចុះថ្ងៃទី២៨ ខែមិថុនា ឆ្នាំ២០១៨ ដែលប្រកាសឱ្យប្រើច្បាប់ស្តីពីការរៀបចំនិងការប្រព្រឹត្តទៅនៃគណៈរដ្ឋមន្ត្រី</a>
+        </li>
+    </ul>
+</ul>
+    
+
+<script>
+const togglers = document.querySelectorAll(".caret");
+togglers.forEach(function(caret){
+  caret.addEventListener("click", function() {
+    this.classList.toggle("caret-down");
+    this.nextElementSibling.classList.toggle("active");
+  });
+});
+
+function searchTree() {
+  const query = document.getElementById("searchBox").value.toLowerCase();
+  const items = document.querySelectorAll("#tree li");
+
+  items.forEach(function(item) {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(query)) {
+      item.classList.remove("hidden");
+      // open parents
+      let parent = item.parentElement;
+      while(parent && parent.tagName === "UL") {
+        const caret = parent.previousElementSibling;
+        if (caret && caret.classList.contains("caret")) {
+          caret.classList.add("caret-down");
+          parent.classList.add("active");
+        }
+        parent = parent.parentElement;
+      }
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+
+  // if query is empty, reset
+  if(query === ""){
+    items.forEach(function(item) {
+      item.classList.remove("hidden");
+    });
+    togglers.forEach(function(caret){
+      caret.classList.remove("caret-down");
+      caret.nextElementSibling.classList.remove("active");
+    });
+  }
+}
+</script>
+
+</body>
+</html>
